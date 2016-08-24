@@ -1,6 +1,11 @@
 <h2>Your Order</h2>
 
 {{#each shoppingCart.ordersList as |meal|}}
-  {{meal.name}} -- ${{meal.price}} &nbsp;<span class="glyphicon glyphicon-trash" {{action "deleteFromCart" meal}}></span><br>
+  <div class="display-cart">
+    <h2>{{meal.name}} -- ${{meal.price}}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-trash" {{action "deleteFromCart" meal}}></span></h2>
+  </div>
 {{/each}}
+
+<hr>
+
 <h3>Total = ${{shoppingCart.totalPrice}}</h3>

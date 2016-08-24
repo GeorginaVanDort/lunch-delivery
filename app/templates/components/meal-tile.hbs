@@ -1,4 +1,8 @@
-<img class="imageDisplay" src={{meal.imgURL}} alt={{meal.name}}/><br>
-<h3>{{meal.name}}</h3>
-<h3>${{meal.price}}</h3>
-<button {{action 'addToCart' meal}} class="btn btn-info">Add to Cart</button>
+<div class="meal-tile">
+  <img class="imageDisplay" src={{meal.imgURL}} alt={{meal.name}}/><br>
+  <div class="row">
+    <h3 class="col-xs-6 col-xs-offset-1">{{meal.name}}</h3>
+    <h3 class="col-xs-5">${{meal.price}}</h3>
+  </div>
+  <button {{action 'addToCart' meal}} class="btn btn-info">Add to Cart</button>
+</div>

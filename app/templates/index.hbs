@@ -1,13 +1,13 @@
 <h1>Welcome to Indian Food Delivery</h1>
-<h2>We delivery to your office!</h2>
+<h2 class="tag-line">We delivery to your office!</h2>
 
-<div class="row">
-  <div class="col-xs-10">
+<div class="content row">
+  <div class="col-xs-9">
     {{#each model as |meal|}}
       {{meal-tile class="col-sm-4" meal=meal}}
     {{/each}}
   </div>
-  <div class="col-xs-2">
+  <div class="cart col-xs-2 col-xs-offset-1">
     {{display-cart}}
   </div>
 </div>

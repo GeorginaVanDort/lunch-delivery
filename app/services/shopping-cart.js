@@ -2,11 +2,22 @@ import Ember from 'ember';
 
 export default Ember.Service.extend ({
   ordersList:[],
+  id: 0,
   addItem(mealItem) {
     this.get('ordersList').pushObject(mealItem);
+    // this.set('id', this.get('id')+1);
+    // var mealItemInCart = {id: this.get('id'), item: mealItem};
+    // this.get('ordersList').pushObject(mealItemInCart);
   },
   removeItem(mealItem) {
-    this.get("ordersList").removeObject(mealItem);
+    // var list = [];
+    // this.get('ordersList').forEach(function(order) {
+    //   list.push(order);
+    // });
+    var ordersListDuplicate = this.get('ordersList').slice();
+    var indexToRemove = ordersListDuplicate.indexOf(mealItem);
+    ordersListDuplicate.splice(indexToRemove, 1);
+    this.set('ordersList', ordersListDuplicate);
   },
   totalPrice: Ember.computed("ordersList.[]", function() {
     var totalPrice = 0;
