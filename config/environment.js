@@ -12,7 +12,12 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    firebase: {
+      apiKey: "AIzaSyDwCoLbVmEZZRIvgiRe0hT_aFsNy6eAmrc",
+      authDomain: "indian-food-delivery.firebaseapp.com",
+      databaseURL: "https://indian-food-delivery.firebaseio.com",
+      storageBucket: "",
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
