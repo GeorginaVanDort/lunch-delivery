@@ -1,0 +1,6 @@
+<h2>Your Order:</h2>
+
+{{#each shoppingCart.ordersList as |mealItem|}}
+  {{mealItem.name}} ${{mealItem.price}}<br>
+{{/each}}
+<h3>Total:</h3>
