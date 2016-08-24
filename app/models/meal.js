@@ -6,5 +6,6 @@ export default DS.Model.extend ({
   price: DS.attr(),
   ingredients: DS.attr(),
   spicyScale: DS.attr(),
+  imgURL: DS.attr(),
   popularity: DS.attr()
 });

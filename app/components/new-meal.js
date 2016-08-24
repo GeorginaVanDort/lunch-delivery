@@ -13,6 +13,7 @@ export default Ember.Component.extend ({
         price: this.get("price"),
         ingredients: this.get("ingredients"),
         spicyScale: this.get("spicyScale"),
+        imgURL: this.get("imgURL"),
         popularity: 0
       };
       this.set("addNewMealForm", false);

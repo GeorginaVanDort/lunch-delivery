@@ -4,6 +4,6 @@
 <h3>All Meal Options</h3>
 <ul>
   {{#each model as |meal|}}
-    <li>{{meal.name}}</li>
+    {{meal-tile meal=meal}}
   {{/each}}
 </ul>
