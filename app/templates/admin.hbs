@@ -1,3 +1,10 @@
 <h1>Administrator</h1>
 
 {{new-meal saveMeal="saveMeal"}}
+
+{{#each model as |meal|}}
+  <p>
+    {{meal.name}}, Order Popularity:
+    {{update-meal meal=meal updateMeal="updateMeal"}}
+  </p>
+{{/each}}

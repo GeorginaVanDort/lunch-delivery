@@ -1,0 +1,36 @@
+{{#if updateMealForm}}
+  <h2>Update Meal Item</h2>
+  <form class="form-group">
+    <div>
+      <label>Name</label>
+      {{input value=name id="name" placeholder=meal.name class="form-control"}}
+    </div>
+    <div>
+      <label>Description</label>
+      {{textarea value=description id="description" placeholder=meal.description class="form-control"}}
+    </div>
+    <div>
+      <label>Price</label>
+      {{input value=price id="price" placeholder=meal.price class="form-control" type="number"}}
+    </div>
+    <div>
+      <label>Ingredients</label>
+      {{textarea value=ingredients id="ingredients" placeholder=meal.ingredients class="form-control"}}
+    </div>
+    <div>
+      <label>Spicy Scale (1-5)</label>
+      {{input value=spicyScale id="spicyScale" placeholder=meal.spicyScale class="form-control"}}
+    </div>
+    <div>
+      <label>Image URL</label>
+      {{input value=imgURL id="imgURL" placeholder=meal.imgURL class="form-control"}}
+    </div>
+    <div>
+      <label>Popularity</label>
+      {{input value=popularity id="popularity" placeholder=meal.popularity class="form-control" type="hidden"}}
+    </div>
+    <button {{action "updateMeal" meal}} class="btn btn-success">Submit</button>
+  </form>
+{{else}}
+  <button {{action "showUpdateMealForm"}} class="btn btn-warning">Update Meal</button>
+{{/if}}
