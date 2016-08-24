@@ -18,6 +18,11 @@ export default Ember.Route.extend ({
       });
       meal.save();
       this.transitionTo("admin");
+    },
+    destroyMeal(meal) {
+      if (confirm("Are you sure you want to delete this meal?")) {
+        meal.destroyRecord(); //Call destroyRecord method on inputted object
+      }
     }
   }
 });
