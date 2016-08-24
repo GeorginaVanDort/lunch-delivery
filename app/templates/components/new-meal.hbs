@@ -1,1 +1,32 @@
-{{yield}}
+{{#if addNewMealForm}}
+  <h2>Create a New Meal Item</h2>
+  <form class="form-group">
+    <div>
+      <label>Name</label>
+      {{input value=name id="name" class="form-control"}}
+    </div>
+    <div>
+      <label>Description</label>
+      {{textarea value=description id="description" class="form-control"}}
+    </div>
+    <div>
+      <label>Price</label>
+      {{input value=price id="price" class="form-control" type="number"}}
+    </div>
+    <div>
+      <label>Ingredients</label>
+      {{textarea value=ingredients id="ingredients" class="form-control"}}
+    </div>
+    <div>
+      <label>Spicy Scale (1-5)</label>
+      {{input value=spicyScale id="spicyScale" class="form-control"}}
+    </div>
+    <div>
+      <label>Popularity</label>
+      {{input value=popularity id="popularity" class="form-control" type="hidden"}}
+    </div>
+    <button {{action "saveMeal"}} class="btn btn-success">Submit</button>
+  </form>
+{{else}}
+  <button {{action "showNewMealForm"}} class="btn btn-primary">Create New Meal</button>
+{{/if}}

@@ -1,1 +1,9 @@
-{{outlet}}
+<h1>Welcome to Indian Food Delivery</h1>
+<h2>We delivery to your office!</h2>
+
+<h3>All Meal Options</h3>
+<ul>
+  {{#each model as |meal|}}
+    <li>{{meal.name}}</li>
+  {{/each}}
+</ul>
