@@ -18,6 +18,12 @@ export default Ember.Component.extend ({
       };
       this.set("addNewMealForm", false);
       this.sendAction("saveMeal", params);
+      this.set("name", "");
+      this.set("description", "");
+      this.set("price", "");
+      this.set("ingredients", "");
+      this.set("spicyScale", "");
+      this.set("imgURL", "");
     }
   }
 });
