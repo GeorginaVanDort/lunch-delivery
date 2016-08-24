@@ -2,5 +2,6 @@
 
 {{#each shoppingCart.ordersList as |mealItem|}}
   {{mealItem.name}} -- ${{mealItem.price}}<br>
+  <span class="glyphicon glyphicon-trash" {{action "deleteFromCart" mealItem}}></span>
 {{/each}}
 <h3>Total = ${{shoppingCart.totalPrice}}</h3>
