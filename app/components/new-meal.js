@@ -10,7 +10,7 @@ export default Ember.Component.extend ({
       var params = {
         name: this.get("name"),
         description: this.get("description"),
-        price: this.get("price"),
+        price: parseInt(this.get("price")),
         ingredients: this.get("ingredients"),
         spicyScale: this.get("spicyScale"),
         imgURL: this.get("imgURL"),
