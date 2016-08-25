@@ -2,20 +2,9 @@ import Ember from 'ember';
 
 export function spicyScale(params/*, hash*/) {
   var mealSpicyScale = params[0].get("spicyScale");
+  var spicyIcon = "<span class='glyphicon glyphicon-fire'></span>";
 
-  // icons: "image/";
-  
-  if(mealSpicyScale === "1") {
-    return "(>_<)";
-  } else if(mealSpicyScale === "2") {
-    return "(>_<)(>_<)";
-  } else if(mealSpicyScale === "3") {
-    return "(>_<)(>_<)(>_<)";
-  } else if(mealSpicyScale === "4") {
-    return "(>_<)(>_<)(>_<)(>_<)";
-  } else {
-    return "(>_<)(>_<)(>_<)(>_<)(>_<)";
-  }
+  return Ember.String.htmlSafe(spicyIcon.repeat(mealSpicyScale));
 }
 
 export default Ember.Helper.helper(spicyScale);
