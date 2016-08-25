@@ -1,6 +1,6 @@
 {{#if updateMealForm}}
-  <h2>Update Meal Item</h2>
-  <form class="form-group">
+  <form class="form-group update-meal">
+    <h2>Update Meal Item</h2>
     <div>
       <label>Name</label>
       {{input value=meal.name id="name" placeholder=meal.name class="form-control"}}
@@ -26,11 +26,10 @@
       {{input value=meal.imgURL id="imgURL" placeholder=meal.imgURL class="form-control"}}
     </div>
     <div>
-      <label>Popularity</label>
       {{input value=meal.popularity id="popularity" placeholder=meal.popularity class="form-control" type="hidden"}}
     </div>
     <button {{action "updateMeal" meal}} class="btn btn-success">Submit</button>
   </form>
 {{else}}
-  <button {{action "showUpdateMealForm"}} class="btn btn-warning">Update Meal</button>
+  <button {{action "showUpdateMealForm"}} class="btn btn-warning col-xs-3 col-xs-offset-2">Update Meal</button>
 {{/if}}

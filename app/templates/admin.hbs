@@ -1,11 +1,22 @@
-<h1>Administrator</h1>
+<h1 class="page-header">Administrator</h1>
 
 {{new-meal saveMeal="saveMeal"}}
 
-{{#each model as |meal|}}
-  <p>{{meal.name}}, Order Popularity:  </p>
-  <div class="row">
-    {{update-meal meal=meal destroyMeal="destroyMeal" class="col-xs-6"}}
-    <button {{action "destroyMeal" meal}} class="btn btn-danger col-xs-6">Delete Meal</button>
+<div class="admin-meals-list">
+  {{#each model as |meal|}}
+  <div class="admin-meals-name">
+    <h3>{{meal.name}}</h3>
+    <div class="row">
+      {{update-meal meal=meal destroyMeal="destroyMeal"}}
+      <button {{action "destroyMeal" meal}} class="btn btn-danger col-xs-3 col-xs-offset-2">Delete Meal</button>
+    </div>
   </div>
-{{/each}}
+  {{/each}}
+</div>
+
+<div class="popularity-ranking">
+  <h2>Meal Popularity Ranking</h2>
+  {{#each model as |meal|}}
+  <h4>{{meal.name}} = {{meal.popularity}}</h4>
+  {{/each}}
+</div>

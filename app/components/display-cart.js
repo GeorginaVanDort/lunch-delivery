@@ -5,6 +5,10 @@ export default Ember.Component.extend({
   actions: {
     deleteFromCart(mealItem) {
       this.get("shoppingCart").removeItem(mealItem);
+      var popularityCount = mealItem.get("popularity");
+      popularityCount --;
+      mealItem.set("popularity", popularityCount);
+      mealItem.save();
     }
   }
 });

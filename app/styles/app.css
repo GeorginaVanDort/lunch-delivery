@@ -46,3 +46,39 @@ body {
 .content {
   margin-bottom: 150px;
 }
+
+.new-meal {
+  margin-top: 75px;
+}
+
+.new-meal .btn-success, .update-meal .btn-success {
+  font-size: 15pt;
+  margin-top: 25px;
+}
+
+.new-meal label, .update-meal label {
+  font-size: 15pt;
+  margin-top: 20px;
+}
+
+.new-meal-btn {
+  font-size: 15pt;
+  margin-top: 75px;
+}
+
+.admin-meals-list {
+  margin-top: 75px;
+}
+
+.admin-meals-list .btn-warning, .admin-meals-list .btn-danger {
+  font-size: 15pt;
+}
+
+.admin-meals-name {
+  margin-bottom: 50px;
+}
+
+.popularity-ranking {
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
