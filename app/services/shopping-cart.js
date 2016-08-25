@@ -4,15 +4,8 @@ export default Ember.Service.extend ({
   ordersList:[],
   addItem(mealItem) {
     this.get('ordersList').pushObject(mealItem);
-    // this.set('id', this.get('id')+1);
-    // var mealItemInCart = {id: this.get('id'), item: mealItem};
-    // this.get('ordersList').pushObject(mealItemInCart);
   },
   removeItem(mealItem) {
-    // var list = [];
-    // this.get('ordersList').forEach(function(order) {
-    //   list.push(order);
-    // });
     var ordersListDuplicate = this.get('ordersList').slice();
     var indexToRemove = ordersListDuplicate.indexOf(mealItem);
     ordersListDuplicate.splice(indexToRemove, 1);

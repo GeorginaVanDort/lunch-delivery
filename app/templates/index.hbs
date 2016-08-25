@@ -11,4 +11,8 @@
 </div>
 
 <h2>Meal Popularity Ranking</h2>
-{{shoppingCart.popularityCount}}
+<div>
+  {{#each model as |meal|}}
+    <h4>{{meal.name}} = {{meal.popularity}}</h4>
+  {{/each}}
+</div>

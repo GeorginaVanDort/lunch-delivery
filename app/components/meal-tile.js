@@ -5,6 +5,10 @@ export default Ember.Component.extend ({
   actions: {
     addToCart(mealItem) {
       this.get('shoppingCart').addItem(mealItem);
+      var popularityCount = mealItem.get("popularity");
+      popularityCount ++;
+      mealItem.set("popularity", popularityCount);
+      mealItem.save();
     }
   }
 });

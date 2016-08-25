@@ -14,7 +14,7 @@ export default Ember.Component.extend ({
         ingredients: this.get("ingredients"),
         spicyScale: this.get("spicyScale"),
         imgURL: this.get("imgURL"),
-        popularity: 0
+        popularity: parseInt(0)
       };
       this.set("updateMealForm", false);
       this.sendAction("updateMeal", meal, params);
