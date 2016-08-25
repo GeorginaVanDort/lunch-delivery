@@ -7,17 +7,8 @@ export default Ember.Component.extend ({
       this.set("updateMealForm", true);
     },
     updateMeal(meal) {
-      var params = {
-        name: this.get("name"),
-        description: this.get("description"),
-        price: parseInt(this.get("price")),
-        ingredients: this.get("ingredients"),
-        spicyScale: this.get("spicyScale"),
-        imgURL: this.get("imgURL"),
-        popularity: parseInt(0)
-      };
+      meal.save();
       this.set("updateMealForm", false);
-      this.sendAction("updateMeal", meal, params);
       this.set("name", "");
       this.set("description", "");
       this.set("price", "");

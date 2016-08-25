@@ -5,7 +5,7 @@
 {{#each model as |meal|}}
   <p>{{meal.name}}, Order Popularity:  </p>
   <div class="row">
-    {{update-meal meal=meal updateMeal="updateMeal" destroyMeal="destroyMeal" class="col-xs-6"}}
+    {{update-meal meal=meal destroyMeal="destroyMeal" class="col-xs-6"}}
     <button {{action "destroyMeal" meal}} class="btn btn-danger col-xs-6">Delete Meal</button>
   </div>
 {{/each}}
