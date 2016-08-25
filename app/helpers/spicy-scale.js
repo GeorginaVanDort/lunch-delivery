@@ -3,6 +3,8 @@ import Ember from 'ember';
 export function spicyScale(params/*, hash*/) {
   var mealSpicyScale = params[0].get("spicyScale");
 
+  // icons: "image/";
+  
   if(mealSpicyScale === "1") {
     return "(>_<)";
   } else if(mealSpicyScale === "2") {
