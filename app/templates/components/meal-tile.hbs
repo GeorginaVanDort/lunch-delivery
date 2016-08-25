@@ -3,6 +3,7 @@
   <div class="row">
     <h3 class="col-xs-6 col-xs-offset-1">{{meal.name}}</h3>
     <h3 class="col-xs-5">${{meal.price}}</h3>
+    <h3>{{spicy-scale meal}}</h3>
   </div>
   <button {{action 'addToCart' meal}} class="btn btn-info">Add to Cart</button>
 </div>
